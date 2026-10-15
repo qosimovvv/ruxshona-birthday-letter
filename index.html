@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#35231f">
+  <meta name="description" content="Ruxshona uchun yurakdan yozilgan eski zamon maktubi va tug‘ilgan kun tabrigi.">
+  <title>Singlim Ruxshona uchun maktub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --pine: #49342b;
+      --pine-deep: #281b19;
+      --paper: #ddcda9;
+      --paper-light: #f1e5c6;
+      --ink: #382920;
+      --muted: #75644d;
+      --rust: #91372d;
+      --gold: #bb9657;
+      --serif: "EB Garamond", Georgia, serif;
+      --display: "IM Fell English", Georgia, serif;
+      --sans: "DM Sans", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--serif); }
+    a { color: inherit; }
+    .hero {
+      position: relative;
+      min-height: min(850px, 100svh);
+      min-height: min(850px, 100vh);
+      overflow: hidden;
+      color: #fffaf0;
+      background: var(--pine-deep) url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2200&q=90") center 54% / cover no-repeat;
+      isolation: isolate;
+    }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(35,22,18,.8) 0%, rgba(35,22,18,.48) 48%, rgba(35,22,18,.12) 100%), linear-gradient(0deg, rgba(35,22,18,.48), transparent 45%); }
+    .hero::after { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .2; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E"); }
+    .topline { width: min(1220px, calc(100% - 64px)); margin: auto; padding: 30px 0; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,250,240,.32); }
+    .brand { display: flex; gap: 12px; align-items: center; color: #fff2d7; text-decoration: none; font-family: var(--display); font-size: 24px; letter-spacing: 0; }
+    .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(255,250,240,.72); border-radius: 50%; font-size: 19px; }
+    .hero-frame { position: absolute; z-index: 0; inset: 18px; border: 1px solid rgba(232,201,149,.34); pointer-events: none; }
+    .hero-frame::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(232,201,149,.18); }
+    .topline, .hero-content { position: relative; z-index: 1; }
+    .hero-content { width: min(1220px, calc(100% - 64px)); margin: auto; padding: clamp(100px, 19vh, 190px) 0 116px; animation: arrive .9s both; }
+    .quill-mark { position: relative; display: flex; align-items: center; width: 106px; height: 76px; margin: -9px 0 13px 2px; color: #e8c995; }
+    .quill-feather { position: absolute; top: 3px; left: 18px; width: 26px; height: 58px; clip-path: polygon(38% 0, 100% 13%, 82% 27%, 99% 40%, 75% 53%, 88% 67%, 58% 79%, 51% 100%, 35% 79%, 12% 67%, 25% 53%, 2% 40%, 19% 27%, 0 13%); background: linear-gradient(125deg, #f0d9ad 0%, #c79d5e 47%, #8e6740 100%); filter: drop-shadow(0 2px 2px rgba(18,10,8,.32)); transform: rotate(23deg); }
+    .quill-feather::after { content: ""; position: absolute; inset: 5px 0; background: repeating-linear-gradient(155deg, transparent 0 7px, rgba(68,44,28,.4) 7.5px 8px, transparent 8.5px 11px); clip-path: polygon(38% 0, 100% 13%, 82% 27%, 99% 40%, 75% 53%, 88% 67%, 58% 79%, 51% 100%, 35% 79%, 12% 67%, 25% 53%, 2% 40%, 19% 27%, 0 13%); }
+    .quill-stem { position: absolute; z-index: 1; top: 18px; left: 30px; width: 2px; height: 57px; border-radius: 2px; background: linear-gradient(#684631, #e4c58c 72%, #f7e5c2); transform: rotate(23deg); transform-origin: top; animation: quill-write 3.2s ease-in-out infinite; }
+    .quill-ink { position: absolute; bottom: 1px; left: 29px; width: 5px; height: 7px; border-radius: 50% 50% 55% 0; background: #a63f30; transform: rotate(-45deg); box-shadow: 0 0 12px rgba(166,63,48,.45); }
+    .quill-rule { width: 45px; height: 1px; margin-left: 48px; background: linear-gradient(90deg, rgba(232,201,149,.78), transparent); }
+    h1 { margin: 0; max-width: 760px; font: 400 clamp(72px, 11vw, 142px)/.82 var(--display); letter-spacing: 0; }
+    h1 span { display: block; color: #f0d9ad; font-style: italic; }
+    .hero-copy { max-width: 470px; margin: 28px 0 34px; color: rgba(255,250,240,.85); font: 400 21px/1.5 var(--serif); }
+    .primary-link { display: inline-flex; align-items: center; gap: 15px; padding: 14px 0; color: #fffaf0; font-size: 12px; font-weight: 600; letter-spacing: 1.1px; text-decoration: none; text-transform: uppercase; border-bottom: 1px solid rgba(240,217,173,.72); transition: gap .2s ease, color .2s ease; }
+    .primary-link:hover { gap: 22px; color: #f0d9ad; }
+    .primary-link span { font-size: 20px; line-height: 12px; }
+    .story { position: relative; padding: 108px 32px 112px; background-color: var(--paper); background-image: radial-gradient(ellipse at 8% 18%, rgba(127,76,43,.13), transparent 34%), radial-gradient(ellipse at 90% 78%, rgba(126,94,48,.12), transparent 32%); }
+    .story-grid { display: grid; grid-template-columns: minmax(260px, .84fr) minmax(0, 1.16fr); gap: clamp(50px, 9vw, 144px); align-items: center; width: min(1040px, 100%); margin: auto; }
+    .photo-wrap { position: relative; min-height: 440px; }
+    .photo-wrap img { display: block; width: 100%; height: 440px; object-fit: cover; filter: saturate(.76); }
+    .photo-wrap::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,250,240,.7); pointer-events: none; }
+    .photo-caption { margin-top: 14px; color: var(--muted); font: italic 17px var(--serif); }
+    .story-copy { padding: 8px 0; }
+    .section-label { color: var(--rust); font: 15px var(--display); letter-spacing: .5px; }
+    h2 { margin: 15px 0 18px; font: 500 clamp(42px, 5.5vw, 67px)/.98 var(--serif); letter-spacing: 0; }
+    .story-copy p { max-width: 470px; margin: 0; color: #59665d; font-size: 15px; line-height: 1.9; }
+    .story-signature { margin-top: 25px; color: var(--rust); font: italic 23px var(--serif); }
+    .letter-section { position: relative; overflow: hidden; padding: 100px 24px 120px; color: #f7ecd1; background: radial-gradient(ellipse at 50% 0%, #634538, var(--pine-deep) 72%); }
+    .letter-section::before { content: ""; position: absolute; width: 480px; height: 480px; top: -190px; right: -110px; border: 1px solid rgba(226,201,155,.22); border-radius: 50%; box-shadow: 0 0 0 38px rgba(226,201,155,.035), 0 0 0 76px rgba(226,201,155,.025); pointer-events: none; }
+    .letter-head { position: relative; z-index: 1; text-align: center; }
+    .letter-head .section-label { color: #e4c68f; }
+    .letter-head h2 { max-width: 600px; margin: 18px auto 12px; }
+    .letter-head p { margin: 0; color: rgba(247,240,226,.68); font: italic 18px var(--serif); }
+    .music-toggle { display: inline-flex; align-items: center; gap: 9px; margin-top: 24px; padding: 10px 15px; border: 1px solid rgba(232,201,149,.48); color: #f0d9ad; background: rgba(255,255,255,.035); font: 14px var(--display); cursor: pointer; transition: background .2s ease, color .2s ease; }
+    .music-toggle:hover, .music-toggle[aria-pressed="true"] { color: #34251f; background: #e5c98f; }
+    .music-toggle span { font-size: 18px; }
+    .envelope-stage { position: relative; width: min(600px, 100%); margin: 54px auto 0; text-align: center; }
+    .seal-gate { display: flex; justify-content: center; gap: 17px; margin: 0 auto 24px; }
+    .brother-seal { display: grid; width: 46px; height: 46px; place-items: center; border: 2px solid rgba(242,204,147,.58); border-radius: 43% 55% 48% 52%; color: #f5dfbb; background: radial-gradient(circle at 34% 28%, #b64d3a, #76251f 76%); box-shadow: 0 4px 10px rgba(20,10,8,.28), inset 0 0 0 3px rgba(106,30,26,.45); font: 20px var(--display); cursor: pointer; transition: transform .2s ease, background .2s ease, opacity .2s ease; }
+    .brother-seal:nth-child(2) { background: radial-gradient(circle at 34% 28%, #c9a85e, #77602e 76%); }
+    .brother-seal:nth-child(3) { background: radial-gradient(circle at 34% 28%, #648274, #29463e 76%); }
+    .brother-seal:hover { transform: translateY(-3px) rotate(-4deg); }
+    .brother-seal:disabled { cursor: default; }
+    .brother-seal[aria-pressed="true"] { color: #382920; background: radial-gradient(circle at 34% 28%, #f0d9a9, #b79558 76%); box-shadow: 0 0 0 3px rgba(226,201,155,.16), inset 0 0 0 3px rgba(83,55,34,.25); }
+    .brother-seal:focus-visible, .brother-tab:focus-visible { outline: 2px solid #f0d9a9; outline-offset: 4px; }
+    .envelope { position: relative; display: block; width: min(390px, 88vw); height: 246px; margin: auto; border: 0; padding: 0; cursor: pointer; background: transparent; perspective: 900px; }
+    .envelope:disabled { cursor: not-allowed; filter: grayscale(.42); opacity: .72; }
+    .envelope-body { position: absolute; inset: 0; overflow: hidden; border: 1px solid #a88b5b; background: repeating-linear-gradient(0deg, rgba(118,78,41,.035) 0 1px, transparent 1px 5px), linear-gradient(145deg, #ead9b3, #cfb88b); box-shadow: 0 18px 40px rgba(0,0,0,.32), inset 0 0 24px rgba(104,62,34,.13); }
+    .postage-stamp { position: absolute; z-index: 4; top: 15px; right: 17px; display: flex; width: 66px; height: 82px; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px dashed #8d6944; color: #81382d; background: linear-gradient(145deg, #f4e8c9, #d8c294); box-shadow: 0 2px 5px rgba(54,33,20,.2); transform: rotate(4deg); }
+    .postage-stamp::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(129,56,45,.48); }
+    .stamp-emblem { z-index: 1; display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid #81382d; border-radius: 50%; font: 22px var(--display); }
+    .postage-stamp small { z-index: 1; font: 7px/1.1 var(--sans); letter-spacing: .7px; text-align: center; }
+    .envelope-body::before, .envelope-body::after { content: ""; position: absolute; z-index: 2; bottom: 0; width: 0; height: 0; border-style: solid; }
+    .envelope-body::before { left: 0; border-width: 123px 195px 0; border-color: #d7c29b transparent transparent; }
+    .envelope-body::after { right: 0; border-width: 0 195px 123px; border-color: transparent transparent #ddcaa5; }
+    .envelope-flap { position: absolute; z-index: 3; top: 0; left: 0; width: 0; height: 0; border-style: solid; border-width: 130px 195px 0; border-color: #b99e70 transparent transparent; filter: drop-shadow(0 2px 2px rgba(72,44,25,.2)); transform-origin: top center; transition: transform .8s ease, z-index 0s .4s; }
+    .wax-seal { position: absolute; z-index: 5; top: 92px; left: calc(50% - 25px); display: grid; width: 50px; height: 50px; place-items: center; border: 2px solid rgba(242,204,147,.58); border-radius: 43% 55% 48% 52%; color: #f5dfbb; background: radial-gradient(circle at 34% 28%, #b64d3a, #76251f 76%); box-shadow: 0 4px 10px rgba(52,22,16,.42), inset 0 0 0 3px rgba(106,30,26,.45); font: 26px var(--display); transition: opacity .25s ease, transform .25s ease; }
+    .envelope:hover .wax-seal { transform: scale(1.08); }
+    .letter-sheet { position: absolute; z-index: 1; left: 8%; bottom: 12px; width: 84%; height: 210px; padding: 20px 18px; color: #5a3929; background: repeating-linear-gradient(0deg, rgba(119,83,48,.07) 0 1px, transparent 1px 7px), linear-gradient(135deg, #f4e6c3, #e3cea1); box-shadow: 0 5px 18px rgba(0,0,0,.22); font: italic 21px/1.4 var(--display); transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+    .letter-sheet span { display: block; padding-top: 8px; color: var(--rust); font: 15px var(--sans); }
+    .envelope.is-open .envelope-flap { z-index: 0; transform: rotateX(180deg); }
+    .envelope.is-open .wax-seal { opacity: 0; transform: scale(.6); }
+    .envelope.is-open .letter-sheet { transform: translateY(-180px); }
+    .open-prompt { margin: 23px 0 0; color: rgba(247,240,226,.68); font-size: 11px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; }
+    .open-prompt span { color: #e4c68f; }
+    .letter-message { display: none; position: relative; z-index: 2; width: min(680px, 100%); margin: 68px auto 0; padding: clamp(28px, 6vw, 54px) clamp(23px, 7vw, 72px); border: 1px solid rgba(100,66,37,.44); outline: 1px solid rgba(100,66,37,.22); outline-offset: -8px; color: #3c3025; background-color: var(--paper-light); background-image: repeating-linear-gradient(transparent 0 35px, rgba(116,85,49,.13) 35px 36px), radial-gradient(ellipse at 10% 8%, rgba(157,115,61,.12), transparent 44%); box-shadow: 0 15px 50px rgba(0,0,0,.34); text-align: left; animation: letterIn .7s both; }
+    .letter-message.visible { display: block; }
+    .letter-date { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #8b7960; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+    .letter-date span:last-child { color: var(--rust); font-size: 22px; user-select: none; }
+    .letter-message h3 { margin: 22px 0 15px; color: var(--pine); font: 400 42px/1 var(--display); }
+    .brother-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 18px; border-bottom: 1px solid rgba(100,66,37,.35); }
+    .brother-tab { padding: 9px 13px 11px; border: 0; border-bottom: 2px solid transparent; color: #75644d; background: transparent; font: 16px var(--display); cursor: pointer; }
+    .brother-tab[aria-selected="true"] { border-bottom-color: var(--rust); color: var(--rust); }
+    .brother-panel { min-height: 118px; padding: 8px 0 15px; }
+    .brother-panel p { margin: 0 0 13px; font: italic 20px/1.65 var(--serif); }
+    .brother-panel p:last-child { margin-bottom: 0; }
+    .brother-panel .placeholder { color: #8b7960; font-size: 17px; }
+    .writing-quill { position: fixed; z-index: 20; display: none; color: #553923; font: 27px/1 var(--display); pointer-events: none; text-shadow: 0 1px 2px rgba(241,229,198,.8); transform: rotate(-28deg); transform-origin: 3px 22px; transition: left .08s linear, top .08s linear; }
+    .writing-quill.visible { display: block; animation: nib-scribe .22s ease-in-out infinite alternate; }
+    .finale-trigger { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 20px auto 0; padding: 11px 16px; border: 1px solid rgba(100,66,37,.42); color: var(--rust); background: rgba(255,255,255,.18); font: 16px var(--display); cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .finale-trigger:hover { background: rgba(255,255,255,.42); transform: translateY(-2px); }
+    .finale-trigger[hidden] { display: none; }
+    .family-finale { position: relative; z-index: 2; width: min(680px, 100%); margin: 68px auto 0; padding: clamp(34px, 7vw, 64px) clamp(24px, 7vw, 72px); border: 1px solid rgba(100,66,37,.44); outline: 1px solid rgba(100,66,37,.22); outline-offset: -8px; color: #3c3025; background-color: var(--paper-light); background-image: radial-gradient(ellipse at 10% 8%, rgba(157,115,61,.14), transparent 44%), repeating-linear-gradient(0deg, transparent 0 35px, rgba(116,85,49,.1) 35px 36px); box-shadow: 0 15px 50px rgba(0,0,0,.34); text-align: center; }
+    .family-finale.visible { animation: letterIn .7s both; }
+    .family-finale h3 { margin: 23px 0 16px; color: var(--pine); font: 400 43px/1.05 var(--display); }
+    .family-finale p { margin: 0 auto 14px; max-width: 500px; font: italic 20px/1.65 var(--serif); }
+    .final-signatures { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 24px; margin: 28px 0 24px; color: var(--rust); font: italic 21px var(--display); }
+    .final-signatures span { white-space: nowrap; }
+    .secret-wish-toggle { margin: 0 auto 22px; padding: 9px 13px; border: 1px solid rgba(100,66,37,.38); color: var(--rust); background: transparent; font: 16px var(--display); cursor: pointer; }
+    .secret-wish-toggle:hover { background: rgba(255,255,255,.32); }
+    .secret-wish { max-width: 480px; margin: 0 auto 24px; padding: 17px 8px 19px; border-top: 1px solid rgba(100,66,37,.28); border-bottom: 1px solid rgba(100,66,37,.28); color: #69442f; font: italic 22px/1.5 var(--display); }
+    .secret-wish[hidden] { display: none; }
+    .secret-wish.visible { animation: letterIn .55s both; }
+    .back-to-letters { border: 0; border-bottom: 1px solid rgba(73,52,43,.48); padding: 7px 2px; color: #75644d; background: transparent; font: 15px var(--display); cursor: pointer; }
+    .wax-particles { position: fixed; z-index: 30; inset: 0; overflow: hidden; pointer-events: none; }
+    .wax-particle { position: absolute; left: var(--x); top: var(--y); width: var(--size); height: var(--size); border-radius: 50%; background: var(--tone); box-shadow: 0 0 7px rgba(240,217,173,.7); animation: wax-burst 1.35s cubic-bezier(.1,.7,.35,1) forwards; }
+    .letter-message .signoff { margin: 23px 0 0; color: var(--rust); font: italic 27px var(--serif); text-align: right; }
+    .close-letter { display: block; margin: 25px auto 0; padding: 10px 16px; border: 1px solid rgba(247,240,226,.55); color: #f7f0e2; background: transparent; font: 600 10px var(--sans); letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; }
+    .close-letter[hidden] { display: none; }
+    .close-letter:hover { color: var(--pine); background: #f7f0e2; }
+    footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 23px max(32px, calc((100vw - 1220px) / 2)); color: rgba(247,240,226,.68); background: var(--pine-deep); font-size: 11px; }
+    footer span:last-child { color: #e4c68f; font: italic 18px var(--serif); }
+    @keyframes arrive { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes letterIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes nib-scribe { from { rotate: -3deg; } to { rotate: 5deg; } }
+    @keyframes quill-write { 0%, 100% { transform: rotate(23deg) translateY(0); } 50% { transform: rotate(18deg) translateY(-3px); } }
+    @keyframes wax-burst { 0%, 18% { opacity: 1; transform: translate(0, 0) scale(1.1); } 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--turn)) scale(.2); } }
+    @media (max-width: 680px) {
+      .hero { min-height: 760px; min-height: 94svh; background-position: 58% center; }
+      .hero::before { background: linear-gradient(90deg, rgba(35,22,18,.74), rgba(35,22,18,.24)), linear-gradient(0deg, rgba(35,22,18,.5), transparent 65%); }
+      .topline, .hero-content { width: calc(100% - 40px); }
+      .topline { padding: 20px 0; }
+      .brand { font-size: 21px; }
+      .hero-content { padding-top: 24vh; }
+      h1 { font-size: clamp(72px, 19vw, 112px); }
+      .hero-copy { max-width: 330px; font-size: 19px; }
+      .story { padding: 68px 22px 76px; }
+      .story-grid { grid-template-columns: 1fr; gap: 37px; }
+      .photo-wrap { min-height: 300px; }
+      .photo-wrap img { height: 300px; }
+      .story-copy { order: -1; }
+      .story-copy p { font-size: 14px; }
+      .letter-section { padding: 74px 20px 82px; }
+      .letter-head h2 { font-size: 48px; }
+      .music-toggle { margin-top: 20px; }
+      .envelope { transform: scale(.82); transform-origin: top center; margin-bottom: -42px; }
+      .seal-gate { gap: 13px; }
+      .brother-seal { width: 42px; height: 42px; }
+      .letter-message { margin-top: 62px; }
+      .letter-message h3 { font-size: 34px; }
+      .brother-tab { padding: 8px 10px 10px; font-size: 15px; }
+      .brother-panel p { font-size: 18px; }
+      .family-finale { margin-top: 54px; }
+      .family-finale h3 { font-size: 36px; }
+      .family-finale p { font-size: 18px; }
+      footer { padding: 19px 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <nav class="topline" aria-label="Asosiy navigatsiya">
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">R</span> Ruxshona uchun</a>
+      </nav>
+      <div class="hero-frame" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="quill-mark" aria-hidden="true"><span class="quill-feather"></span><span class="quill-stem"></span><span class="quill-ink"></span><span class="quill-rule"></span></div>
+        <h1 id="hero-title">Aziz <span>singlim,</span> Ruxshona</h1>
+        <p class="hero-copy">Baʼzi tilaklar shoshilmay yoziladi. Xuddi eski zamonlardagi kabi: siyoh bilan, mehr bilan, faqat sen uchun, singlim.</p>
+        <a class="primary-link" href="#maktub">Maktubni top <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section class="story" aria-labelledby="story-title">
+      <div class="story-grid">
+        <figure class="photo-wrap">
+          <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1100&q=85" alt="Baland tokchalarda qadimiy kitoblar terilgan kutubxona" loading="lazy">
+        </figure>
+        <div class="story-copy">
+          <div class="section-label">Senga atalgan sahifa</div>
+          <h2 id="story-title">Bugun olam<br>yanada chiroyli.</h2>
+          <p>Chunki bugun sen tug‘ilgan kun, singlim. Hayoting doimo bahordagi eski hovlidek fayzli bo‘lsin: derazangdan quyosh arimasin, eshigingdan yaxshi insonlar kirsin, ko‘nglingda esa eng go‘zal orzular yashasin.</p>
+          <div class="story-signature">Eng ezgu tilaklar bilan</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section" id="maktub" aria-labelledby="letter-title">
+      <div class="letter-head">
+        <h2 id="letter-title">Senga bir maktub bor</h2>
+        <p>Muhrni bos. Ichida aytilmagan eng iliq so‘zlar bor.</p>
+        <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false"><span aria-hidden="true">♫</span> Sokin kuyni tinglash</button>
+      </div>
+      <div class="envelope-stage">
+        <div class="seal-gate" aria-label="Aka-ukalarning muhrlari">
+          <button class="brother-seal" type="button" aria-label="Bekzod aka muhrini yechish" aria-pressed="false">B</button>
+          <button class="brother-seal" type="button" aria-label="Sherzod aka muhrini yechish" aria-pressed="false">S</button>
+          <button class="brother-seal" type="button" aria-label="Dilyorbek uka muhrini yechish" aria-pressed="false">D</button>
+        </div>
+        <button class="envelope" id="envelope" type="button" aria-label="Avval uchta muhrni yeching" aria-expanded="false" aria-controls="letter-message" disabled>
+          <span class="envelope-body" aria-hidden="true"></span>
+          <span class="postage-stamp" aria-hidden="true"><span class="stamp-emblem">R</span><small>RUXSHONA<br>POCHTASI</small></span>
+          <span class="letter-sheet" aria-hidden="true">Faqat sen uchun yozilgan…<span>Ruxshonaga</span></span>
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="wax-seal" aria-hidden="true">R</span>
+        </button>
+        <p class="open-prompt" id="open-prompt" aria-live="polite"><span>↟</span> AVVAL UCHTA MUHRNI YECHING</p>
+        <article class="letter-message" id="letter-message" aria-live="polite">
+          <h3>Uch qalbdan maktub</h3>
+          <div class="brother-tabs" role="tablist" aria-label="Aka va ukasining tabriklari">
+            <button class="brother-tab" id="tab-one" type="button" role="tab" aria-selected="true" aria-controls="note-one">Bekzod aka</button>
+            <button class="brother-tab" id="tab-two" type="button" role="tab" aria-selected="false" aria-controls="note-two" tabindex="-1">Sherzod aka</button>
+            <button class="brother-tab" id="tab-three" type="button" role="tab" aria-selected="false" aria-controls="note-three" tabindex="-1">Dilyorbek uka</button>
+          </div>
+          <section class="brother-panel" id="note-one" role="tabpanel" aria-labelledby="tab-one">
+            <p>Mening aziz singlim <strong>Ruxshona!</strong> ❤️</p>
+            <p>Bugun sening kuning… Shuning uchun bugun tilagim bitta — doim baxtli bo‘l. Hayotda nima bo‘lishidan qat’i nazar, ko‘zlaringdagi quvonch va yuzingdagi tabassuming hech qachon yo‘qolmasin. 🥹❤️</p>
+            <p>Sen men uchun shunchaki singil emassan. Sen — bolaligimdan beri yonimda ulg‘ayib kelayotgan, quvonchimni ham, tashvishimni ham o‘zimniki kabi his qiladigan qadrli insonimsan.</p>
+            <p>Vaqt o‘tadi, ulg‘ayamiz, hayotimiz o‘zgaradi. Balki bir kun kelib har kim o‘z oilasi, o‘z hayoti bilan band bo‘lib ketar… Lekin sen baribir mening singlim bo‘lib qolaverasan. Qayerda bo‘lsang ham, qanday yoshga kirsang ham, kerak bo‘lsa seni himoya qiladigan akang borligini unutma. 🤍</p>
+            <p>Men senga hayotdagi eng chiroyli narsalarni tilayman. Qalbingni og‘ritadigan insonlardan uzoq bo‘l. Seni chin dildan qadrlaydigan, ko‘zingdagi yoshni kulguga aylantira oladigan insonlar doim yoningda bo‘lsin.</p>
+            <p>Orzularing katta bo‘lsin. Ularga yetishishda hech qachon o‘zingga ishonchingni yo‘qotma. Biror kun charchab qolsang yoki hammasi qiyindek tuyulsa, “Mening akam bor” deb esla. Balki hamma muammoni hal qila olmasman, lekin imkonim boricha doim yoningda bo‘laman. ❤️</p>
+            <p>Tug‘ilgan kuning muborak bo‘lsin, Ruxshonam! 🎂🌹</p>
+            <p>Alloh umringni uzoq, rizqingni keng, qalbingni xotirjam, yo‘lingni doimo yorug‘ qilsin. Har bir yangi yoshing avvalgisidan ham chiroyli bo‘lsin.</p>
+            <p class="signoff">Seni yaxshi ko‘raman, singlim. ❤️<br>Doim baxtli bo‘l.<br>Bekzod akangdan. 🤍</p>
+          </section>
+          <section class="brother-panel" id="note-two" role="tabpanel" aria-labelledby="tab-two" hidden>
+            <p>Azizim <strong>Ruxshona!</strong> ❤️</p>
+            <p>Tug‘ilgan kuning muborak bo‘lsin, singlim! 🎂🌷</p>
+            <p>Bugun sening yana bir yoshing ulg‘ayayotgan kuning. Vaqt qanday tez o‘tib ketayotganiga ba’zan o‘zim ham hayron qolaman. Kechagina kichkina singlim eding, bugun esa o‘z orzulari, maqsadlari bor go‘zal qiz bo‘lib ulg‘ayibsan. 🥹❤️</p>
+            <p>Senga eng avvalo ko‘ngil xotirjamligi tilayman. Chunki inson uchun eng katta boylik — qalbi tinch va yuzida tabassum bilan yashash. Hayotingda seni ranjitadigan kunlar kam, quvontiradigan kunlar esa juda ko‘p bo‘lsin.</p>
+            <p>Qaysi yo‘lni tanlasang ham, o‘sha yo‘lda omad seni tark etmasin. Orzularing shunchaki orzu bo‘lib qolmay, bir kun kelib “men bunga erishdim” deb faxr bilan aytadigan kunlaring ko‘p bo‘lsin. ✨</p>
+            <p>Va bir narsani hech qachon unutma: aka uchun singlisining baxti juda qadrli. Men har doim sening yaxshi bo‘lishingni, kulib yurishingni va hayotda o‘z o‘rningni topishingni xohlayman. Hayotda qanday kunlar kelmasin, akang sifatida imkonim boricha yoningda bo‘laman. 🤍</p>
+            <p>Yangi yoshing senga yangi baxtlar, chiroyli xotiralar va kutilmagan quvonchlar olib kelsin. 🌸</p>
+            <p>Tug‘ilgan kuning muborak bo‘lsin, mening qadrli singlim Ruxshona! ❤️🎂</p>
+            <p class="signoff">Doimo kulib yur, doimo baxtli bo‘l.<br>Seni yaxshi ko‘radigan akang — Sherzod. ❤️</p>
+          </section>
+          <section class="brother-panel" id="note-three" role="tabpanel" aria-labelledby="tab-three" hidden>
+            <p>Ruxshona, mehribon <strong>opajonim!</strong> ❤️</p>
+            <p>Tug‘ilgan kuningiz muborak bo‘lsin! 🎂🌹</p>
+            <p>Sizga tilak bildirishga qancha so‘z topmay, baribir siz men uchun qanchalik qadrli ekaningizni to‘liq aytib berolmayman. Siz mening opam, kerak paytda maslahat beradigan, kerak paytda kuldiradigan, yonimda bo‘lishingizning o‘zi menga dalda bo‘ladigan insonimsiz. ❤️</p>
+            <p>Har doim sog‘-salomat bo‘lib, yuzingizdan tabassum arimasin. Hayotingizda hech qachon ko‘nglingizni sindiradigan insonlar bo‘lmasin. Har bir kuningiz quvonchli, har bir qadamingiz omadli bo‘lsin. 🌷</p>
+            <p>Nima orzu qilgan bo‘lsangiz, barchasiga erishing. Kelajakda o‘zingiz xohlagandek chiroyli hayot kechiring. Baxtingiz doimo butun, qalbingiz xotirjam bo‘lsin. 🤍</p>
+            <p>Men hali kichik ukangiz bo‘lsam ham, sizni juda yaxshi ko‘raman va doim baxtli bo‘lishingizni xohlayman. 🥹❤️</p>
+            <p>Yangi yoshingiz muborak bo‘lsin, opajon! Doimo kulib yuring, chunki sizning kulishingiz bizga ham quvonch beradi. ❤️</p>
+            <p class="signoff">Dilyorbek ukangizdan. 🤍</p>
+          </section>
+        </article>
+        <button class="finale-trigger" id="finale-trigger" type="button" hidden>Uchovimizdan yakuniy tilak <span aria-hidden="true">→</span></button>
+        <section class="family-finale" id="family-finale" aria-labelledby="finale-title" hidden>
+          <div class="letter-date"><span>Uch aka-ukadan, bir qalbdan</span><span aria-hidden="true">✳</span></div>
+          <h3 id="finale-title">Aziz Ruxshona!</h3>
+          <p>Uchovimizning tilagi bitta: doimo baxtli bo‘l, yuzingdan tabassum arimasin. Orzularing ushalib, qalbing mehr va xotirjamlikka to‘lsin.</p>
+          <p>Qanday kun bo‘lmasin, seni yaxshi ko‘radigan va yoningda turadigan akalaring hamda ukang bor.</p>
+          <div class="final-signatures"><span>Bekzod aka</span><span>Sherzod aka</span><span>Dilyorbek uka</span></div>
+          <button class="secret-wish-toggle" id="secret-wish-toggle" type="button" aria-expanded="false" aria-controls="secret-wish">Yashirin tilakni ochish</button>
+          <p class="secret-wish" id="secret-wish" hidden>Bu maktubni ochganingdek, hayotingdagi barcha go‘zal orzular ham birin-ketin ochilsin. Seni uchovimiz juda yaxshi ko‘ramiz. ❤️</p>
+          <button class="back-to-letters" id="back-to-letters" type="button">Shaxsiy tabriklarga qaytish</button>
+        </section>
+        <button class="close-letter" id="close-letter" type="button" hidden>Maktubni yopish</button>
+      </div>
+    </section>
+  </main>
+  <footer><span>Bir varaq qog‘ozga sig‘magan tilaklar bilan.</span><span>Ruxshona uchun, mehr ila</span></footer>
+  <span class="writing-quill" id="writing-quill" aria-hidden="true">✒</span>
+  <div class="wax-particles" id="wax-particles" aria-hidden="true"></div>
+  <script>
+    const envelope = document.querySelector('#envelope');
+    const letter = document.querySelector('#letter-message');
+    const closeButton = document.querySelector('#close-letter');
+    const prompt = document.querySelector('#open-prompt');
+    const finaleTrigger = document.querySelector('#finale-trigger');
+    const familyFinale = document.querySelector('#family-finale');
+    const backToLetters = document.querySelector('#back-to-letters');
+    const musicButton = document.querySelector('#music-toggle');
+    const writingQuill = document.querySelector('#writing-quill');
+    const particleLayer = document.querySelector('#wax-particles');
+    const secretWishToggle = document.querySelector('#secret-wish-toggle');
+    const secretWish = document.querySelector('#secret-wish');
+    const seals = [...document.querySelectorAll('.brother-seal')];
+    const tabs = [...document.querySelectorAll('.brother-tab')];
+    const panels = [...document.querySelectorAll('.brother-panel')];
+    let writingTimer;
+    let sealAudioContext;
+
+    function burstWax(seal) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const bounds = seal.getBoundingClientRect();
+      const colors = ['#e8c995', '#a83c2d', '#f3e4bf'];
+      for (let index = 0; index < 16; index += 1) {
+        const angle = (Math.PI * 2 * index) / 16 + Math.random() * .2;
+        const distance = 36 + Math.random() * 54;
+        const particle = document.createElement('span');
+        particle.className = 'wax-particle';
+        particle.style.setProperty('--x', `${bounds.left + bounds.width / 2}px`);
+        particle.style.setProperty('--y', `${bounds.top + bounds.height / 2}px`);
+        particle.style.setProperty('--dx', `${Math.cos(angle) * distance}px`);
+        particle.style.setProperty('--dy', `${Math.sin(angle) * distance}px`);
+        particle.style.setProperty('--size', `${4 + Math.random() * 4}px`);
+        particle.style.setProperty('--tone', colors[index % colors.length]);
+        particle.style.setProperty('--turn', `${Math.round(Math.random() * 300 - 150)}deg`);
+        particleLayer.append(particle);
+        particle.addEventListener('animationend', () => particle.remove(), { once: true });
+      }
+    }
+
+    async function playWaxCrack() {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return;
+      sealAudioContext ??= new AudioContextClass();
+      if (sealAudioContext.state === 'suspended') await sealAudioContext.resume();
+      const now = sealAudioContext.currentTime;
+      const buffer = sealAudioContext.createBuffer(1, Math.floor(sealAudioContext.sampleRate * .12), sealAudioContext.sampleRate);
+      const samples = buffer.getChannelData(0);
+      for (let index = 0; index < samples.length; index += 1) samples[index] = Math.random() * 2 - 1;
+      const noise = sealAudioContext.createBufferSource();
+      const filter = sealAudioContext.createBiquadFilter();
+      const noiseGain = sealAudioContext.createGain();
+      noise.buffer = buffer;
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1050, now);
+      noiseGain.gain.setValueAtTime(.13, now);
+      noiseGain.gain.exponentialRampToValueAtTime(.001, now + .12);
+      noise.connect(filter);
+      filter.connect(noiseGain);
+      noiseGain.connect(sealAudioContext.destination);
+      noise.start(now);
+      noise.stop(now + .13);
+
+      const knock = sealAudioContext.createOscillator();
+      const knockGain = sealAudioContext.createGain();
+      knock.type = 'triangle';
+      knock.frequency.setValueAtTime(125, now);
+      knock.frequency.exponentialRampToValueAtTime(58, now + .1);
+      knockGain.gain.setValueAtTime(.07, now);
+      knockGain.gain.exponentialRampToValueAtTime(.001, now + .11);
+      knock.connect(knockGain);
+      knockGain.connect(sealAudioContext.destination);
+      knock.start(now);
+      knock.stop(now + .12);
+    }
+
+    function revealPanel(panel) {
+      window.clearTimeout(writingTimer);
+      writingQuill.classList.remove('visible');
+      const queue = [];
+
+      panel.querySelectorAll('p').forEach((paragraph) => {
+        if (!paragraph.dataset.originalHtml) {
+          paragraph.dataset.originalHtml = paragraph.innerHTML;
+        }
+        paragraph.innerHTML = paragraph.dataset.originalHtml;
+        const walker = document.createTreeWalker(paragraph, NodeFilter.SHOW_TEXT);
+        let textNode = walker.nextNode();
+        while (textNode) {
+          const words = textNode.textContent.match(/\S+\s*|\s+/g) || [];
+          textNode.textContent = '';
+          words.forEach((word) => queue.push({ textNode, word }));
+          textNode = walker.nextNode();
+        }
+      });
+
+      let wordIndex = 0;
+      function writeNextWord() {
+        if (wordIndex === queue.length) {
+          writingQuill.classList.remove('visible');
+          return;
+        }
+        const { textNode, word } = queue[wordIndex];
+        textNode.textContent += word;
+        const caret = document.createRange();
+        caret.selectNodeContents(textNode);
+        caret.collapse(false);
+        const caretRect = caret.getBoundingClientRect();
+        writingQuill.style.left = `${Math.min(caretRect.right + 1, window.innerWidth - 28)}px`;
+        writingQuill.style.top = `${Math.max(4, caretRect.top - 8)}px`;
+        writingQuill.classList.add('visible');
+        wordIndex += 1;
+        writingTimer = window.setTimeout(writeNextWord, 82);
+      }
+
+      writeNextWord();
+    }
+
+    seals.forEach((seal) => {
+      seal.addEventListener('click', () => {
+        seal.setAttribute('aria-pressed', 'true');
+        seal.disabled = true;
+        burstWax(seal);
+        playWaxCrack();
+        const openedSeals = seals.filter((item) => item.getAttribute('aria-pressed') === 'true').length;
+        if (openedSeals === seals.length) {
+          envelope.disabled = false;
+          envelope.setAttribute('aria-label', 'Uch muhr yechildi, maktubni ochish');
+          prompt.innerHTML = '<span>↟</span> ENDI MAKTUBNI OCHING';
+        } else {
+          prompt.innerHTML = `<span>↟</span> ${openedSeals} / 3 MUHR YECHILDI`;
+        }
+      });
+    });
+
+    tabs.forEach((tab, selectedIndex) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((item, index) => {
+          const isSelected = index === selectedIndex;
+          item.setAttribute('aria-selected', String(isSelected));
+          item.tabIndex = isSelected ? 0 : -1;
+          panels[index].hidden = !isSelected;
+        });
+        revealPanel(panels[selectedIndex]);
+      });
+    });
+
+    const melody = [392, 440, 523.25, 440, 392, 329.63, 349.23, 392];
+    const bassLine = [196, 174.61, 146.83, 164.81];
+    let audioContext;
+    let musicTimer;
+    let musicStep = 0;
+
+    function playTone(frequency, startTime, volume, duration) {
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      oscillator.type = 'triangle';
+      oscillator.frequency.setValueAtTime(frequency, startTime);
+      gain.gain.setValueAtTime(0.0001, startTime);
+      gain.gain.exponentialRampToValueAtTime(volume, startTime + 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start(startTime);
+      oscillator.stop(startTime + duration + 0.02);
+    }
+
+    function playMusicBeat() {
+      const now = audioContext.currentTime;
+      playTone(melody[musicStep], now, 0.026, 0.62);
+      if (musicStep % 2 === 0) {
+        playTone(bassLine[musicStep / 2], now, 0.016, 1.1);
+      }
+      musicStep = (musicStep + 1) % melody.length;
+    }
+
+    async function toggleMusic() {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) {
+        musicButton.textContent = 'Bu brauzer kuy ijrosini qo‘llamaydi';
+        musicButton.disabled = true;
+        return;
+      }
+
+      if (audioContext) {
+        window.clearInterval(musicTimer);
+        await audioContext.close();
+        audioContext = undefined;
+        musicButton.setAttribute('aria-pressed', 'false');
+        musicButton.innerHTML = '<span aria-hidden="true">♫</span> Sokin kuyni tinglash';
+        return;
+      }
+
+      audioContext = new AudioContextClass();
+      await audioContext.resume();
+      musicStep = 0;
+      playMusicBeat();
+      musicTimer = window.setInterval(playMusicBeat, 720);
+      musicButton.setAttribute('aria-pressed', 'true');
+      musicButton.innerHTML = '<span aria-hidden="true">♫</span> Kuy ijrosini to‘xtatish';
+    }
+
+    musicButton.addEventListener('click', toggleMusic);
+
+    function setFinaleOpen(isOpen) {
+      window.clearTimeout(writingTimer);
+      writingQuill.classList.remove('visible');
+      letter.classList.toggle('visible', !isOpen);
+      familyFinale.hidden = !isOpen;
+      familyFinale.classList.toggle('visible', isOpen);
+      finaleTrigger.hidden = isOpen;
+      closeButton.hidden = isOpen;
+      if (isOpen) {
+        window.setTimeout(() => familyFinale.scrollIntoView({ behavior: 'smooth', block: 'center' }), 80);
+      } else {
+        revealPanel(panels.find((panel) => !panel.hidden));
+        letter.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    finaleTrigger.addEventListener('click', () => setFinaleOpen(true));
+    backToLetters.addEventListener('click', () => setFinaleOpen(false));
+
+    secretWishToggle.addEventListener('click', () => {
+      const isOpen = secretWish.hidden;
+      secretWish.hidden = !isOpen;
+      secretWish.classList.toggle('visible', isOpen);
+      secretWishToggle.setAttribute('aria-expanded', String(isOpen));
+      secretWishToggle.textContent = isOpen ? 'Yashirin tilakni yopish' : 'Yashirin tilakni ochish';
+    });
+
+    function setLetterOpen(isOpen) {
+      if (!isOpen) {
+        window.clearTimeout(writingTimer);
+        writingQuill.classList.remove('visible');
+      }
+      envelope.classList.toggle('is-open', isOpen);
+      envelope.setAttribute('aria-expanded', String(isOpen));
+      letter.classList.toggle('visible', isOpen);
+      familyFinale.hidden = true;
+      familyFinale.classList.remove('visible');
+      finaleTrigger.hidden = !isOpen;
+      closeButton.hidden = !isOpen;
+      prompt.hidden = isOpen;
+      if (isOpen) {
+        revealPanel(panels.find((panel) => !panel.hidden));
+        window.setTimeout(() => letter.scrollIntoView({ behavior: 'smooth', block: 'center' }), 180);
+      } else {
+        envelope.focus();
+      }
+    }
+
+    envelope.addEventListener('click', () => setLetterOpen(true));
+    closeButton.addEventListener('click', () => setLetterOpen(false));
+  </script>
+</body>
+</html>
